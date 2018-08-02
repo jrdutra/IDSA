@@ -9,15 +9,16 @@ Config.set('graphics', 'width', '400')
 Config.set('graphics', 'height', '220')
 
 
-
 class MainGUI(Screen):
-    pass
+    score = StringProperty("")
+    score = "Teste"
 
 
 class FileChooserGUI(Screen):
     def select_to(self, *args):
         try:
             print(str(args[1][0]))
+            self.str_root = str(args[1][0])
         except:
             print("Erro")
 
