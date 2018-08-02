@@ -3,34 +3,24 @@
     BoxLayout:
         id:operation_box
         orientation:'vertical'
-        BoxLayout:
+        GridLayout:
+            cols:2
             padding:[10,5,10,5]
             spacing: 10
-            orientation:'horizontal'
             Label:
                 text:'Root Dir:'
-                size_hint: (0.3, 1)
+                size_hint_x:None
+                width:50
             TextInput:
                 id:txt_root_dir
-            Button:
-                size_hint: (0.3, 1)
-                text:'Select'
-        BoxLayout:
-            padding:[10,5,10,5]
-            spacing: 10
-            orientation:'horizontal'
             Label:
                 text:'File Type:'
-                size_hint: (0.3, 1)
+                size_hint_x:None
+                width:50
             Spinner:
                 id: spinner_1
-                size_hint: (0.3, 1)
                 text: '*.jpg'
                 values: ('*.jpg', '*.png')
-            Label:
-                color: 1,0,0,1
-                font_size:11
-                text:'<< Choose the image type to ocr.'
     BoxLayout:
         id:progress_bar_box
         padding:[10,5,10,5]
