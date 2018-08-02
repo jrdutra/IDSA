@@ -4,7 +4,7 @@ from kivy.config import Config
 
 Config.set('graphics', 'resizable', False)
 Config.set('graphics', 'width', '400')
-Config.set('graphics', 'height', '150')
+Config.set('graphics', 'height', '200')
 
 class MainGUI(BoxLayout):
     pass

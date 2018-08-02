@@ -28,8 +28,8 @@
       <file leaf-file-name="Application.kv" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Application.kv">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="436">
-              <caret line="37" column="35" lean-forward="true" selection-start-line="30" selection-start-column="12" selection-end-line="37" selection-end-column="35" />
+            <state relative-caret-position="385">
+              <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
             </state>
           </provider>
         </entry>
@@ -371,8 +371,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Application.kv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="37" column="35" lean-forward="true" selection-start-line="30" selection-start-column="12" selection-end-line="37" selection-end-column="35" />
+        <state relative-caret-position="385">
+          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
         </state>
       </provider>
     </entry>
