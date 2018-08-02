@@ -1,18 +1,35 @@
 from kivy.app import App
-from kivy.uix.boxlayout import BoxLayout
+from kivy.lang import Builder
+from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.config import Config
+from kivy.properties import StringProperty
 
 Config.set('graphics', 'resizable', False)
 Config.set('graphics', 'width', '400')
 Config.set('graphics', 'height', '220')
 
-class MainGUI(BoxLayout):
+
+
+class MainGUI(Screen):
     pass
+
+
+class FileChooserGUI(Screen):
+    def select_to(self, *args):
+        try:
+            print(str(args[1][0]))
+        except:
+            print("Erro")
+
 
 
 class Application(App):
     def build(self):
         self.title = "Image Digital Scanner and Analyzer"
-        return MainGUI()
+        root = ScreenManager()
+        root.add_widget(MainGUI(name="main_gui"))
+        root.add_widget(FileChooserGUI(name="file_chooser_gui"))
+        return root
+
 
 Application().run()
