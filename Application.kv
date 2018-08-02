@@ -2,7 +2,50 @@
     orientation:'vertical'
     BoxLayout:
         id:operation_box
-        orientation:'horizontal'
-    BoxLayout:
-        id:progress_bar
         orientation:'vertical'
+        BoxLayout:
+            padding:[10,5,10,5]
+            spacing: 10
+            orientation:'horizontal'
+            Label:
+                text:'Root Dir:'
+                size_hint: (0.3, 1)
+            TextInput:
+                id:txt_root_dir
+            Button:
+                size_hint: (0.3, 1)
+                text:'Select'
+        BoxLayout:
+            padding:[10,5,10,5]
+            spacing: 10
+            orientation:'horizontal'
+            Label:
+                text:'File Type:'
+                size_hint: (0.3, 1)
+            Spinner:
+                id: spinner_1
+                size_hint: (0.3, 1)
+                text: '*.jpg'
+                values: ('*.jpg', '*.png')
+            Label:
+                color: 1,0,0,1
+                font_size:11
+                text:'<< Choose the image type to ocr.'
+    BoxLayout:
+        id:progress_bar_box
+        padding:[10,5,10,5]
+        spacing: 10
+        orientation:'vertical'
+        BoxLayout:
+            orientation:'horizontal'
+            Label:
+                id:lblInfo
+                text:'Info:'
+                size_hint: (0.1, 1)
+            Label:
+                id:lblInfo
+                text:'Informations here'
+                size_hint: (0.9, 1)
+        ProgressBar:
+            max:100
+            value:50
