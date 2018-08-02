@@ -2,69 +2,67 @@
     BoxLayout:
         orientation:'vertical'
         BoxLayout:
-            id:operation_box
-            orientation:'vertical'
-            GridLayout:
-                cols:3
-                padding:[10,15,10,5]
-                spacing: 10
-                Label:
-                    text:'Root Dir:'
-                    size_hint_x:None
-                    width:50
-                TextInput:
-                    id:txt_root_dir
-                    text:str(root.score)
-                Button:
-                    text:'Select'
-                    size_hint: (0.3, 1)
-                    on_release: root.manager.current = 'file_chooser_gui'
-                Label:
-                    text:'File Type:'
-                    size_hint_x:None
-                    width:50
-                Spinner:
-                    id: spinner_1
-                    text: '*.jpg'
-                    values: ('*.jpg', '*.png')
-        BoxLayout:
-            id:progress_bar_box
-            padding:[10,5,10,5]
-            spacing: 10
             orientation:'vertical'
             BoxLayout:
-                orientation:'horizontal'
-                Label:
-                    id:lblInfo
-                    text:'Info:'
-                    size_hint: (0.1, 1)
-                Label:
-                    id:lblInfo
-                    text:'Informations here'
-                    size_hint: (0.9, 1)
-            ProgressBar:
-                max:100
-                value:50
+                id:operation_box
+                orientation:'vertical'
+                GridLayout:
+                    cols:3
+                    padding:[10,15,10,5]
+                    spacing: 10
+                    Label:
+                        text:'Root Dir:'
+                        size_hint_x:None
+                        width:50
+                    TextInput:
+                        id:txt_root_dir
+                    Button:
+                        text:'Select'
+                        size_hint: (0.3, 1)
+                        on_release: root.manager.current = 'file_chooser_gui'
+                    Label:
+                        text:'File Type:'
+                        size_hint_x:None
+                        width:50
+                    Spinner:
+                        id: spinner_1
+                        text: '*.jpg'
+                        values: ('*.jpg', '*.png')
+            BoxLayout:
+                id:progress_bar_box
+                padding:[10,5,10,5]
+                spacing: 10
+                orientation:'vertical'
+                BoxLayout:
+                    orientation:'horizontal'
+                    Label:
+                        id:lblInfo
+                        text:'Info:'
+                        size_hint: (0.1, 1)
+                    Label:
+                        id:lblInfo
+                        text:'Informations here'
+                        size_hint: (0.9, 1)
+                ProgressBar:
+                    max:100
+                    value:50
+            BoxLayout:
+                height:40
+                size_hint_y:None
+                padding:[10,0,10,10]
+                spacing: 10
+                Button:
+                    text:'Run the OCR Algorithm'
         BoxLayout:
-            height:40
-            size_hint_y:None
-            padding:[10,0,10,10]
+            orientation:'vertical'
+            padding:[10,10,10,10]
             spacing: 10
+            FileChooserListView
+                id:file_chooser
+                dirselect: True
+                fileselect: False
+                on_selection:root.select_to(*args)
             Button:
-                text:'Run the OCR Algorithm'
-
-<FileChooserGUI>:
-    id:filechooserid
-    BoxLayout:
-        orientation:'vertical'
-        padding:[10,10,10,10]
-        spacing: 10
-        FileChooserListView
-            id:file_chooser
-            dirselect: True
-            fileselect: False
-            on_selection:root.select_to(*args)
-        Button:
-            size_hint: (1, 0.2)
-            text:'Select'
-            on_release: root.manager.current = 'main_gui'
+                size_hint: (1, 0.2)
+                text:'Select'
+                on_release: root.manager.current = 'main_gui'

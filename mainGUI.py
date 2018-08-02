@@ -6,15 +6,10 @@ from kivy.properties import StringProperty
 
 Config.set('graphics', 'resizable', False)
 Config.set('graphics', 'width', '400')
-Config.set('graphics', 'height', '220')
+Config.set('graphics', 'height', '520')
 
 
 class MainGUI(Screen):
-    score = StringProperty("")
-    score = "Teste"
-
-
-class FileChooserGUI(Screen):
     def select_to(self, *args):
         try:
             print(str(args[1][0]))
@@ -22,15 +17,9 @@ class FileChooserGUI(Screen):
         except:
             print("Erro")
 
-
-
 class Application(App):
     def build(self):
         self.title = "Image Digital Scanner and Analyzer"
-        root = ScreenManager()
-        root.add_widget(MainGUI(name="main_gui"))
-        root.add_widget(FileChooserGUI(name="file_chooser_gui"))
-        return root
-
+        return MainGUI()
 
 Application().run()
