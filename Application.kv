@@ -10,26 +10,26 @@
                 dirselect: True
                 fileselect: False
                 on_selection:root.select_to(*args)
+                path:root.txt_root_dir
         BoxLayout:
             orientation:'vertical'
             BoxLayout:
                 id:operation_box
                 orientation:'vertical'
+                size_hint: (1, 0.7)
+                Label:
+                    halign: 'right'
+                    valign: 'middle'
+                    text:root.txt_root_current_dir
+                    size_hint: (1, 0.3)
                 GridLayout:
                     cols:2
                     padding:[10,15,10,5]
                     spacing: 10
                     Label:
-                        text:'Root Dir:'
+                        text:'File type to run OCR:'
                         size_hint_x:None
-                        width:50
-                    TextInput:
-                        id:txtRootDir
-                        text:root.txt_root_dir
-                    Label:
-                        text:'File Type:'
-                        size_hint_x:None
-                        width:50
+                        width:140
                     Spinner:
                         id: spinner_1
                         text: '*.jpg'

@@ -11,22 +11,22 @@ Config.set('graphics', 'height', '520')
 
 
 class MainGUI(BoxLayout):
-    root_writer = JsonFile("root_reg")
+    root_file = JsonFile("root_reg")
     txt_root_dir = StringProperty('')
-
+    txt_root_current_dir = StringProperty('')
+    data = root_file.json_details_read()
+    txt_root_dir = str(data['root'])
     def select_to(self, *args):
         try:
             self.txt_root_dir = str(args[1][0])
-            self.root_writer.root_persist(self.txt_root_dir)
+            self.root_file.root_persist(self.txt_root_dir)
+            self.txt_root_current_dir = str(args[1][0])
         except:
             print("Erro")
 
 class Application(App):
-    root_reader = JsonFile("root_reg")
+
     def build(self):
-        root_data = self.root_reader.json_details_read()
-        str_root = root_data['root']
-        MainGUI().txt_root_dir = str(root_data)
         self.title = "Image Digital Scanner and Analyzer"
         return MainGUI()
 
