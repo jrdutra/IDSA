@@ -32,8 +32,9 @@
                         width:140
                     Spinner:
                         id: spinner_1
-                        text: '*.jpg'
-                        values: ('*.jpg', '*.png')
+                        text: '<select type>'
+                        values: ('jpg', 'png')
+                        on_text: root.img_ext = spinner_1.text
             BoxLayout:
                 id:progress_bar_box
                 padding:[10,5,10,5]
@@ -59,3 +60,4 @@
                 spacing: 10
                 Button:
                     text:'Run the OCR Algorithm'
+                    on_release: root.click_run_button()

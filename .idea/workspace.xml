@@ -22,20 +22,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Application.kv" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Application.kv" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application.kv">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+            <state relative-caret-position="205">
+              <caret line="34" column="43" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mainGUI.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="COcrReader.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/COcrReader.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="104">
+              <caret line="15" column="50" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="50" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mainGUI.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mainGUI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+            <state relative-caret-position="265">
+              <caret line="33" column="48" lean-forward="true" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="48" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
@@ -64,15 +76,15 @@
         <option value="$PROJECT_DIR$/ocr-jpg-converter-module.py" />
         <option value="$PROJECT_DIR$/../xDownload/setup.py" />
         <option value="$PROJECT_DIR$/main.py" />
-        <option value="$PROJECT_DIR$/COcrReader.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/CFileChooser.py" />
         <option value="$PROJECT_DIR$/fileChooserGui.py" />
         <option value="$PROJECT_DIR$/fileChooserGUI.py" />
         <option value="$PROJECT_DIR$/FileChooser.kv" />
         <option value="$PROJECT_DIR$/CJsonFile.py" />
-        <option value="$PROJECT_DIR$/mainGUI.py" />
+        <option value="$PROJECT_DIR$/COcrReader.py" />
         <option value="$PROJECT_DIR$/Application.kv" />
+        <option value="$PROJECT_DIR$/mainGUI.py" />
       </list>
     </option>
   </component>
@@ -271,7 +283,7 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.3290938" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.39109698" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.39109698" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -291,6 +303,11 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial" />
     <option name="LAST_COMMIT_MESSAGE" value="Initial" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/mainGUI.py">
@@ -448,29 +465,12 @@
     <entry file="file://$PROJECT_DIR$/setup.py" />
     <entry file="file://$PROJECT_DIR$/script.py" />
     <entry file="file://$PROJECT_DIR$/../xDownload/setup.py" />
-    <entry file="file://$PROJECT_DIR$/COcrReader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="58" selection-start-line="36" selection-start-column="58" selection-end-line="36" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ocr-jpg-converter-module.py" />
     <entry file="file://$PROJECT_DIR$/README.md" />
     <entry file="file://$PROJECT_DIR$/main.py" />
     <entry file="file://$PROJECT_DIR$/CFileChooser.py" />
     <entry file="file://$PROJECT_DIR$/FileChooser.kv" />
     <entry file="file://$PROJECT_DIR$/fileChooserGUI.py" />
-    <entry file="file://$PROJECT_DIR$/mainGUI.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CJsonFile.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
@@ -478,10 +478,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/COcrReader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="15" column="50" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Application.kv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+        <state relative-caret-position="205">
+          <caret line="34" column="43" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainGUI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="33" column="48" lean-forward="true" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
