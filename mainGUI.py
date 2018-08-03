@@ -10,10 +10,11 @@ Config.set('graphics', 'height', '520')
 
 
 class MainGUI(Screen):
+    txt_root_dir = StringProperty('')
     def select_to(self, *args):
         try:
             print(str(args[1][0]))
-            self.str_root = str(args[1][0])
+            self.txt_root_dir = str(args[1][0])
         except:
             print("Erro")
 
