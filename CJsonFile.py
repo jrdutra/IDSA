@@ -20,14 +20,9 @@ class JsonFile:
             str_ = json.dumps(data, indent=4, sort_keys=True, separators=(',', ': '), ensure_ascii=False)
             outfile.write(str_)
 
-    def root_persist(self, _file_quantity, _current_number, _current_dir):
-        percent = (_current_number / _file_quantity) * 100  # percent calc
-        current_dir = _current_dir.replace("\\\\", "\\")
+    def root_persist(self, _root):
         # Define data
-        data = {'%': percent,
-                'range': _file_quantity,
-                'current': _current_number,
-                'dir': current_dir}
+        data = {'root': _root}
         # Write JSON file
         with io.open(self.file_name + '.json', 'w', encoding='utf8') as outfile:
             str_ = json.dumps(data, indent=4, sort_keys=True, separators=(',', ': '), ensure_ascii=False)

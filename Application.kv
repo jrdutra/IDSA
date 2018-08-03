@@ -10,10 +10,6 @@
                 dirselect: True
                 fileselect: False
                 on_selection:root.select_to(*args)
-            Button:
-                size_hint: (1, 0.2)
-                text:'Select'
-                on_release: root.manager.current = 'main_gui'
         BoxLayout:
             orientation:'vertical'
             BoxLayout:
@@ -58,7 +54,7 @@
                     value:50
             BoxLayout:
                 height:40
-                size_hint_y:None
+                size_hint: (1, 0.5)
                 padding:[10,0,10,10]
                 spacing: 10
                 Button:
