@@ -41,6 +41,15 @@ class MainGUI(BoxLayout):
         root_file = JsonFile("root_reg")
         data = root_file.json_details_read()
         Clock.schedule_interval(self.gui_refresh, 0.1)
+
+        # reset all initial info
+
+        self.info_file.json_img_txt_details_conversion(1, 1, "-")
+        self.percent = 0
+        self.current_number = 0
+        self.rage_numer = 0
+        self.current_process_dir = '-'
+        self.info_text = "Stating Conversion"
         try:
             command = 'start python mainProcess.py ' + data['root'] + ' ' + self.img_ext
             os.system(command)
