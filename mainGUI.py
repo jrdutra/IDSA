@@ -2,9 +2,10 @@ from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
 from kivy.lang import Builder
 from kivy.config import Config
-from kivy.properties import StringProperty
+from kivy.properties import StringProperty, NumericProperty
 from CJsonFile import JsonFile
 import os
+from kivy.clock import Clock
 
 Config.set('graphics', 'resizable', False)
 Config.set('graphics', 'width', '400')
@@ -12,12 +13,21 @@ Config.set('graphics', 'height', '520')
 
 
 class MainGUI(BoxLayout):
-    root_file = JsonFile("root_reg")
-    txt_root_dir = ''
+
     txt_root_current_dir = StringProperty('')
+    txt_root_dir = ''
     img_ext = StringProperty('')
+    percent = NumericProperty()
+    current_number = NumericProperty()
+    rage_numer = NumericProperty()
+    current_process_dir = StringProperty()
+
+    root_file = JsonFile("root_reg")
     data = root_file.json_details_read()
     txt_root_dir = str(data['root'])
+
+    info_file = JsonFile("current_data")
+
     def select_to(self, *args):
         try:
             self.txt_root_dir = str(args[1][0])
@@ -29,11 +39,22 @@ class MainGUI(BoxLayout):
     def click_run_button(self):
         root_file = JsonFile("root_reg")
         data = root_file.json_details_read()
+        Clock.schedule_interval(self.gui_refresh, 0.5)
         try:
             command = 'start python mainProcess.py ' + data['root'] + ' ' + self.img_ext
             os.system(command)
         except:
             print("Something wrong.")
+
+    def gui_refresh(self, dt):
+        self.info_data = self.info_file.json_details_read()
+        self.percent = self.info_data['%']
+        self.current_number = self.info_data['current']
+        self.rage_numer = self.info_data['range']
+        self.current_process_dir = str(self.info_data['dir'])
+        print(self.current_process_dir)
+
+
 
 class Application(App):
 
