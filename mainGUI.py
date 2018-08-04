@@ -21,6 +21,7 @@ class MainGUI(BoxLayout):
     current_number = NumericProperty()
     rage_numer = NumericProperty()
     current_process_dir = StringProperty()
+    info_text = StringProperty()
 
     root_file = JsonFile("root_reg")
     data = root_file.json_details_read()
@@ -39,7 +40,7 @@ class MainGUI(BoxLayout):
     def click_run_button(self):
         root_file = JsonFile("root_reg")
         data = root_file.json_details_read()
-        Clock.schedule_interval(self.gui_refresh, 0.5)
+        Clock.schedule_interval(self.gui_refresh, 0.1)
         try:
             command = 'start python mainProcess.py ' + data['root'] + ' ' + self.img_ext
             os.system(command)
@@ -52,8 +53,7 @@ class MainGUI(BoxLayout):
         self.current_number = self.info_data['current']
         self.rage_numer = self.info_data['range']
         self.current_process_dir = str(self.info_data['dir'])
-        print(self.current_process_dir)
-
+        self.info_text = "File " + str(self.current_number) + " from " + str(self.rage_numer) + " files."
 
 
 class Application(App):
