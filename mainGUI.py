@@ -4,7 +4,7 @@ from kivy.lang import Builder
 from kivy.config import Config
 from kivy.properties import StringProperty
 from CJsonFile import JsonFile
-from COcrReader import OcrReader
+import os
 
 Config.set('graphics', 'resizable', False)
 Config.set('graphics', 'width', '400')
@@ -29,11 +29,11 @@ class MainGUI(BoxLayout):
     def click_run_button(self):
         root_file = JsonFile("root_reg")
         data = root_file.json_details_read()
-        ocrreader = OcrReader(data['root'])
         try:
-            ocrreader.generate_all(self.img_ext)
+            command = 'start python mainProcess.py ' + data['root'] + ' ' + self.img_ext
+            os.system(command)
         except:
-            print("Erro")
+            print("Something wrong.")
 
 class Application(App):
 
