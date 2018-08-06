@@ -7,7 +7,7 @@ if len(sys.argv) == 3:
 else:
     print("Wrong arguments...")
 
-ocrreader = OcrReader(root_dir)
+ocrreader = OcrReader(str(root_dir).replace("_", " "))
 
 try:
     ocrreader.generate_all(img_type)

@@ -40,7 +40,7 @@ class MainGUI(BoxLayout):
     def click_run_button(self):
         root_file = JsonFile("root_reg")
         data = root_file.json_details_read()
-        root_dir = data['root']
+        root_dir = str(data['root']).replace(" ", "_")
         Clock.schedule_interval(self.gui_refresh, 0.1)
         # reset all initial info
 
