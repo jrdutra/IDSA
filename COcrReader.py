@@ -42,6 +42,6 @@ class OcrReader:
                     current_dir = os.path.join(path, name)
                     if os.path.isfile(current_dir + ".txt") == 0:  # se nao existir o .txt com texto, cria
                         self.qt_lida += 1
-                        print("Converting: " + current_dir)
+                        print("Converting: " + "[" + str(self.qt_lida) +" from " + str(self.qt_arq) + "]" + current_dir)
                         self.generate_ocr(current_dir)
                         self.current_data.json_img_txt_details_conversion(self.qt_arq, self.qt_lida, current_dir)
